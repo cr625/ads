@@ -35,7 +35,8 @@ def process_file(path):
     return pandas.concat(process_records(records))
 
 
-def process_files():
+def process_files(dir):
+    dir_list = os.listdir(dir)
     results = []
     for file in dir_list[1:]:
         path = os.path.join(dir, file)
